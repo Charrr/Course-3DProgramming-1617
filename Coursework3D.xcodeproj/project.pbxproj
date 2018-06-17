@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1022D19F1EC468A40087FE34 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1022D19E1EC468A40087FE34 /* GLUT.framework */; };
+		1022D1A11EC468B30087FE34 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1022D1A01EC468B30087FE34 /* OpenGL.framework */; };
+		1092BD9D1ECEC1A2007990AE /* LAB8.c in Sources */ = {isa = PBXBuildFile; fileRef = 1092BD9B1ECEC1A2007990AE /* LAB8.c */; };
 		10AE288F1EA83A380048CEDB /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 10AE288E1EA83A380048CEDB /* main.c */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +26,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1022D19E1EC468A40087FE34 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		1022D1A01EC468B30087FE34 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		1092BD9B1ECEC1A2007990AE /* LAB8.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LAB8.c; sourceTree = "<group>"; };
+		1092BD9C1ECEC1A2007990AE /* LAB8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAB8.h; sourceTree = "<group>"; };
 		10AE288B1EA83A380048CEDB /* Coursework3D */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Coursework3D; sourceTree = BUILT_PRODUCTS_DIR; };
 		10AE288E1EA83A380048CEDB /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -32,17 +39,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1022D1A11EC468B30087FE34 /* OpenGL.framework in Frameworks */,
+				1022D19F1EC468A40087FE34 /* GLUT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1022D19D1EC468A30087FE34 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1022D1A01EC468B30087FE34 /* OpenGL.framework */,
+				1022D19E1EC468A40087FE34 /* GLUT.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		10AE28821EA83A380048CEDB = {
 			isa = PBXGroup;
 			children = (
 				10AE288D1EA83A380048CEDB /* Coursework3D */,
 				10AE288C1EA83A380048CEDB /* Products */,
+				1022D19D1EC468A30087FE34 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,6 +76,8 @@
 		10AE288D1EA83A380048CEDB /* Coursework3D */ = {
 			isa = PBXGroup;
 			children = (
+				1092BD9B1ECEC1A2007990AE /* LAB8.c */,
+				1092BD9C1ECEC1A2007990AE /* LAB8.h */,
 				10AE288E1EA83A380048CEDB /* main.c */,
 			);
 			path = Coursework3D;
@@ -119,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1092BD9D1ECEC1A2007990AE /* LAB8.c in Sources */,
 				10AE288F1EA83A380048CEDB /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,6 +240,7 @@
 		10AE28931EA83A380048CEDB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -225,6 +248,7 @@
 		10AE28941EA83A380048CEDB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -248,6 +272,7 @@
 				10AE28941EA83A380048CEDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
